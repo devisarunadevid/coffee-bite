@@ -41,7 +41,7 @@ This project showcases an elegant UI to display menu items, cafe details, and pr
 
 📌 **Service Page**  
 *Display menu items with images.*  
-![Menu Page](./screenshots/menu.png)
+![Menu Page](./screenshots/services.png)
 
 📌 **Register Page**  
 *User registration form to join Coffee-Bite.*  
