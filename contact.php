@@ -9,9 +9,22 @@
       font-family: 'Roboto', sans-serif;
     }
 
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
     body {
+      flex: 1;
       background-color: #fef6e4;
       color: #333;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .marquee {
@@ -22,7 +35,6 @@
       text-align: center;
       font-size: 22px;
       font-weight: bold;
-      position: relative;
     }
 
     .map-container {
@@ -80,24 +92,26 @@
 </head>
 
 <body>
-  <div class="marquee">Welcome to Coffee Bite!</div>
+  <main>
+    <div class="marquee">Welcome to Coffee Bite!</div>
 
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6858630384!2d80.21442297484171!3d12.991932987325296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525dfa2ed55f3b%3A0x5178b7858fba797f!2sStarbucks!5e0!3m2!1sen!2sin!4v1735031550976!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6858630384!2d80.21442297484171!3d12.991932987325296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525dfa2ed55f3b%3A0x5178b7858fba797f!2sStarbucks!5e0!3m2!1sen!2sin!4v1735031550976!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
-  <div class="contact-info">
-    <div class="info-box">
-      <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
-      <p>No 142, Phoenix Marketcity</p>
-      <p>Velachery Road, Indira Gandhi Road</p>
-      <p>Chennai - 600042</p>
+    <div class="contact-info">
+      <div class="info-box">
+        <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+        <p>No 142, Phoenix Marketcity</p>
+        <p>Velachery Road, Indira Gandhi Road</p>
+        <p>Chennai - 600042</p>
+      </div>
+      <div class="info-box">
+        <h4><i class="fas fa-phone-alt"></i> Contact Us</h4>
+        <p>18602660010</p>
+        <p>coffeebite@gmail.com</p>
+      </div>
     </div>
-    <div class="info-box">
-      <h4><i class="fas fa-phone-alt"></i> Contact Us</h4>
-      <p>18602660010</p>
-      <p>coffeebite@gmail.com</p>
-    </div>
-  </div>
+  </main>
 </body>
 <?php include("footer.html"); ?>

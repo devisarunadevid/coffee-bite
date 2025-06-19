@@ -9,9 +9,20 @@
       font-family: 'Roboto', sans-serif;
     }
 
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
     body {
+      flex: 1;
       background-color: #fff8e7;
       color: #3e2723;
+    }
+
+    main {
+      flex: 1;
     }
 
     .hero {
@@ -61,20 +72,23 @@
 </head>
 
 <body>
-  <div class="hero">
-    <img src="cafe.jpg" alt="Coffee Cup Image" />
-    <div class="hero-text">
-      <p>Good days start with great coffee.</p>
-      <p>Brewing comfort, one cup at a time.</p>
-      <p>Escape the ordinary, embrace the extraordinary.</p>
-      <p>A lot can happen over coffee.</p>
-      <p>Inspiring and nurturing the human spirit.</p>
+  <main>
+    <div class="hero">
+      <img src="cafe.jpg" alt="Coffee Cup Image" />
+      <div class="hero-text">
+        <p>Good days start with great coffee.</p>
+        <p>Brewing comfort, one cup at a time.</p>
+        <p>Escape the ordinary, embrace the extraordinary.</p>
+        <p>A lot can happen over coffee.</p>
+        <p>Inspiring and nurturing the human spirit.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="section">
-    <p>A coffee shop's atmosphere can be unique, crafted by lighting, music, and thoughtful design choices. A great coffee shop offers a unique experience, guided by friendly baristas eager to share recommendations.</p>
-    <p>Our cafe is cozy, inviting, and designed to be your sanctuary. Enjoy pet-friendly spaces, grab-and-go convenience, and exciting events that make every visit memorable.</p>
-  </div>
+    <div class="section">
+      <p>A coffee shop's atmosphere can be unique, crafted by lighting, music, and thoughtful design choices. A great coffee shop offers a unique experience, guided by friendly baristas eager to share recommendations.</p>
+      <p>Our cafe is cozy, inviting, and designed to be your sanctuary. Enjoy pet-friendly spaces, grab-and-go convenience, and exciting events that make every visit memorable.</p>
+    </div>
+  </main>
 </body>
+
 <?php include("footer.html"); ?>

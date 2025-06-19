@@ -8,9 +8,22 @@
       font-family: 'Roboto', sans-serif;
     }
 
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
     body {
+      flex: 1;
       background-color: #fef6e4;
       color: #333;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .marquee {
@@ -80,23 +93,25 @@
 </head>
 
 <body>
-  <div class="marquee">
-    <div class="marquee-text">Welcome to Coffee Bite! Enjoy the aroma & taste of perfection ☕</div>
-  </div>
-
-  <div class="section">
-    <img src="cafe1.jpg" alt="about cafe">
-    <div class="text">
-      <p>At Coffee Bite, we take pride in our artisanal coffee, brewed to perfection using the finest beans from around the world. Our menu is thoughtfully curated to offer a variety of delectable options, from hearty breakfasts to indulgent desserts. Whether you're looking for a cozy corner to read a book or catch up with friends, you'll find it here.</p>
+  <main>
+    <div class="marquee">
+      <div class="marquee-text">Welcome to Coffee Bite! Enjoy the aroma & taste of perfection ☕</div>
     </div>
-  </div>
 
-  <div class="section">
-    <div class="text">
-      <p>Our friendly staff is dedicated to making your experience memorable. We believe in the power of connection, creating a warm and inviting atmosphere that feels like a home away from home. So come in, take a seat, and let us treat you to the best coffee and bites in town.</p>
+    <div class="section">
+      <img src="cafe1.jpg" alt="about cafe">
+      <div class="text">
+        <p>At Coffee Bite, we take pride in our artisanal coffee, brewed to perfection using the finest beans from around the world. Our menu is thoughtfully curated to offer a variety of delectable options, from hearty breakfasts to indulgent desserts. Whether you're looking for a cozy corner to read a book or catch up with friends, you'll find it here.</p>
+      </div>
     </div>
-    <img src="cafe2.jpg" alt="about cafe 2">
-  </div>
+
+    <div class="section">
+      <div class="text">
+        <p>Our friendly staff is dedicated to making your experience memorable. We believe in the power of connection, creating a warm and inviting atmosphere that feels like a home away from home. So come in, take a seat, and let us treat you to the best coffee and bites in town.</p>
+      </div>
+      <img src="cafe2.jpg" alt="about cafe 2">
+    </div>
+  </main>
 </body>
 
 <?php include("footer.html"); ?>
