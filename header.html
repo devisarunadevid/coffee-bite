@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Bite</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -15,75 +21,73 @@
       }
 
       header {
-        width: 100%;
-        background-color: #fefff2;
+        background-color: #fff8e7;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
 
-      .header-top {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
+      .logo img {
+        height: 120px; /* BIGGER LOGO */
       }
 
-      .header-top img {
-        height: 80px;
-        width: auto;
-      }
-
-      .header-top h1 {
-        margin-left: 15px;
-        color: brown;
-        font-size: 2rem;
+      .title {
+        font-size: 42px; /* BIGGER TITLE */
+        color: #8b4513;
+        font-weight: bold;
         text-transform: uppercase;
+        margin-top: 10px;
       }
 
       nav {
+        margin-top: 15px;
         background-color: burlywood;
+        padding: 12px 0;
       }
 
-      nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-      }
-
-      nav ul li {
-        margin: 0 15px;
-      }
-
-      nav ul li a {
-        color: white;
+      nav a {
         text-decoration: none;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0 20px;
+        transition: color 0.3s;
       }
 
-      nav ul li a i {
+      nav a:hover {
+        color: #5a381e;
+      }
+
+      nav a i {
         margin-right: 5px;
       }
 
-      nav ul li a:hover {
-        color: #3b2f2f;
+      @media (max-width: 600px) {
+        .title {
+          font-size: 28px;
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
       }
     </style>
   </head>
-
   <body>
     <header>
-      <div class="header-top">
+      <div class="logo">
         <img src="COFFEE BITE.png" alt="Coffee Bite Logo" />
-        <h1>Coffee Bite</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="home.php"><i class="fa fa-home"></i>Home</a></li>
-          <li><a href="about.php"><i class="fa fa-info-circle"></i>About</a></li>
-          <li><a href="contact.php"><i class="fa fa-phone"></i>Contact Us</a></li>
-          <li><a href="service.php"><i class="fa fa-briefcase"></i>Services</a></li>
-          <li><a href="register.php"><i class="fa fa-user-plus"></i>Register</a></li>
-        </ul>
-      </nav>
+      <div class="title">Coffee Bite</div>
     </header>
+
+    <nav>
+      <a href="home.php"><i class="fa fa-home"></i> Home</a>
+      <a href="about.php"><i class="fa fa-info-circle"></i> About</a>
+      <a href="contact.php"><i class="fa fa-phone"></i> Contact</a>
+      <a href="service.php"><i class="fa fa-briefcase"></i> Services</a>
+      <a href="register.php"><i class="fa fa-user-plus"></i> Register</a>
+    </nav>
   </body>
 </html>
