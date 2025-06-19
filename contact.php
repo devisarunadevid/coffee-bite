@@ -45,13 +45,13 @@
       padding: 30px 10px;
       justify-content: center;
       align-items: flex-start;
+      text-align: center;
     }
 
     .info-box {
-      flex: 1;
-      min-width: 300px;
+      flex: 1 1 100%;
+      min-width: unset;
       padding: 20px;
-      text-align: center;
       color: #3e2723;
     }
 
@@ -66,10 +66,14 @@
       margin: 8px 0;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 769px) {
+      .info-box {
+        flex: 1 1 45%;
+        text-align: left;
+      }
+
       .contact-info {
-        flex-direction: column;
-        text-align: center;
+        text-align: left;
       }
     }
   </style>

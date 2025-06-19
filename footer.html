@@ -25,12 +25,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: 20px;
         padding: 40px 20px;
       }
 
       .footer-section {
-        flex: 1 1 300px;
+        flex: 1 1 280px;
         margin: 10px;
+        min-width: 250px;
       }
 
       .footer-section h3 {
@@ -39,25 +41,26 @@
         color: #5d4037;
       }
 
-      .footer-section p {
+      .footer-section p,
+      .footer-section ul {
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.6;
         text-align: justify;
       }
 
       .footer-section ul {
-        list-style-type: none;
-        padding: 0;
+        list-style: none;
+        padding-left: 0;
       }
 
       .footer-section ul li {
-        margin: 8px 0;
+        margin-bottom: 8px;
       }
 
       .footer-section ul li a {
         text-decoration: none;
         color: #3e2723;
-        font-size: 16px;
+        transition: color 0.3s ease;
       }
 
       .footer-section ul li a:hover {
@@ -71,6 +74,24 @@
         color: white;
         padding: 12px 0;
         font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-section {
+          margin: 20px 0;
+          text-align: center;
+        }
+
+        .footer-section p,
+        .footer-section ul {
+          text-align: center;
+        }
       }
     </style>
   </head>
@@ -100,9 +121,9 @@
         </div>
 
         <div class="footer-section">
-          <h3>&#9742; Contact</h3>
-          <p>18602660010</p>
-          <p>coffeebite@gmail.com</p>
+          <h3><i class="fa fa-phone"></i> Contact</h3>
+          <p>📞 18602660010</p>
+          <p>📧 coffeebite@gmail.com</p>
         </div>
       </div>
 
