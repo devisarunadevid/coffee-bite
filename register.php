@@ -1,119 +1,147 @@
-<?php include("header.html")
-?>
+<?php include("header.html"); ?>
 <head>
-    <style>
-        *{
-            margin:0%;
-            padding:0%;
-        }
-        #register{
-            height: 700px;
-            width:100%;
-            background-image: url('Coffee pattern3.jpeg');
-            background-size:cover;
-        }
-        table{
-            height:350px;
-            width: 500px;
-            top: 7px;
-            left:20%;
-             position:relative;
-        }
-        .button{
-            background-color:chocolate;
-            border:none;
-            border-radius:25px;
-        }
-         .button:hover{
-            background-color:chocolate;
-            border:none;
-            border-radius:5px;
-            box-shadow:brown 0px 0px 10px 7px;
-        }
-        td{
-            font-size:25px;
-            text-transform:capitalize;
-        }
-         input,select{
-            width:100%;
-            height:30px;
-            border:black double;
-            background-color:white;
-        }
-          input[type="submit"]{
-            width:80%;
-            left:30%;
-            position: relative;
-        }
-        input[type="reset"]{
-            width:50%;
-            left:30%;
-            position: relative;
-        }
-        </style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-image: url('Coffee pattern3.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #3e2723;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: chocolate;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 2px solid chocolate;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .form-group input[type="file"] {
+      background-color: #fff;
+      border: none;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: chocolate;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #5d2c04;
+    }
+
+    @media(max-width: 500px) {
+      .btn-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="form-container">
+    <h2>Register Now</h2>
     <form action="connect.php" method="post" enctype="multipart/form-data">
-        <div id="register">
-            <table>
-                <tr>
-                    <td>
-                        name
-                    </td>
-                    <td><input name="name" type="text"></td>
-                </tr>
-                <tr>
-                    <td>
-                       email
-                    </td>
-                    <td><input name="email" type="email"></td>
-                </tr>
-                <tr>
-                    <td>
-                       password
-                    </td>
-                    <td><input name="password" type="password"></td>
-                </tr>
-                <tr>
-                    <td>
-                        phone_number
-                    </td>
-                    <td><input name="phone_number" type="tel"></td>
-                </tr>
-                <tr>
-                    <td>
-                        specials
-                    </td>
-                    <td><select name="specials" id="">
-                        <option value="coffee">coffee</option>
-                        <option value="mocha">mocha</option>
-                        <option value="cappuccino">cappuccino</option>
-                        <option value="brownie">brownie</option>
-                        <option value="quinoa salad">quinoa salad</option>
-                        <option value="rosemilk">rosemilk</option>
-                        <option value="croissants">croissants</option>
-                        <option value="latte">latte</option>
-                        <option value="excelsa">excelsa</option>
-                         <option value="robusta">robusta</option>
-                        <option value="americano">americano</option>           
-                        <option value="espresso">espresso</option>
-                    </select></td>
-                </tr>
-                <tr>
-                <td>dob</td>
-                <td><input name="dob" type="date"></td>
-            </tr>
-            <tr>
-                <td>id_proof</td>
-                <td><input name="id_proof" type="file"></td>
-            </tr>
-             <tr>
-                <td><input class="button" type="submit"></td>
-                <td><input class="button" type="reset"></td>
-            </tr>
-            </table>
-        </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input name="name" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input name="email" type="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" type="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone_number">Phone Number</label>
+        <input name="phone_number" type="tel" required>
+      </div>
+
+      <div class="form-group">
+        <label for="specials">Specials</label>
+        <select name="specials" required>
+          <option value="">--Select--</option>
+          <option value="coffee">Coffee</option>
+          <option value="mocha">Mocha</option>
+          <option value="cappuccino">Cappuccino</option>
+          <option value="brownie">Brownie</option>
+          <option value="quinoa salad">Quinoa Salad</option>
+          <option value="rosemilk">Rosemilk</option>
+          <option value="croissants">Croissants</option>
+          <option value="latte">Latte</option>
+          <option value="excelsa">Excelsa</option>
+          <option value="robusta">Robusta</option>
+          <option value="americano">Americano</option>
+          <option value="espresso">Espresso</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input name="dob" type="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="id_proof">ID Proof</label>
+        <input name="id_proof" type="file" required>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn" type="submit">Submit</button>
+        <button class="btn" type="reset">Reset</button>
+      </div>
     </form>
+  </div>
 </body>
-<?php include("footer.html")
-?>
+
+<?php include("footer.html"); ?>
