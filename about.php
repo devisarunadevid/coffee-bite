@@ -112,6 +112,7 @@
       <img src="cafe2.jpg" alt="about cafe 2">
     </div>
   </main>
+  <?php include("footer.html"); ?>
 </body>
 
-<?php include("footer.html"); ?>
+
