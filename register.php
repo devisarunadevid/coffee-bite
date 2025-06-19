@@ -53,7 +53,7 @@
         </style>
 </head>
 <body>
-    <form action="connect.php" method="post">
+    <form action="connect.php" method="post" enctype="multipart/form-data">
         <div id="register">
             <table>
                 <tr>
