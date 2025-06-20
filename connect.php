@@ -27,8 +27,18 @@ move_uploaded_file($_FILES["id_proof"]["tmp_name"], $target_file);
 $query = "INSERT INTO details (name, email, password, phone_number, specials, dob, id_proof) 
           VALUES ('$a', '$b', '$c', '$d', '$e', '$f', '$target_file')";
 
+session_start();
 if (mysqli_query($con, $query)) {
-    echo "<script>alert('Thank you for registering!'); window.location.href='index.php';</script>";
+    $_SESSION['user_details'] = [
+        'name' => $a,
+        'email' => $b,
+        'phone_number' => $d,
+        'specials' => $e,
+        'dob' => $f,
+        'id_proof' => $target_file
+    ];
+    header('Location: details.php');
+    exit();
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($con);
 }

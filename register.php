@@ -84,11 +84,14 @@
       padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
     }
 
     .btn:hover {
-      background-color: #5d2c04;
+      background-color: #e6a86c;
+      color: #3e2723;
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(230,168,108,0.18);
     }
 
     @media(max-width: 500px) {
@@ -103,6 +106,7 @@
 <body>
   <main>
     <div class="form-container">
+      <div id="form-message" style="display:none; margin-bottom:16px; text-align:center; font-weight:bold;"></div>
       <h2>Register Now</h2>
       <form action="connect.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
