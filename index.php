@@ -2,6 +2,7 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
+    /* RESET EVERYTHING THAT COULD CAUSE SPACE */
     * {
       margin: 0;
       padding: 0;
@@ -9,110 +10,95 @@
       font-family: 'Roboto', sans-serif;
     }
 
+    /* CRITICAL FIX: Lock screen height */
     html, body {
       height: 100%;
-      background-color: #fff8e7;
-      color: #3e2723;
-      /* Prevent extra scrolling */
+      width: 100%;
       overflow-x: hidden;
+      background-color: #fff8e7;
     }
 
+    /* Force footer to bottom */
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      /* Ensure no extra space */
-      margin: 0;
-      padding: 0;
+      /* Remove all default margins */
+      margin: 0 !important;
+      padding: 0 !important;
     }
 
     main {
       flex: 1;
-      width: 100%;
-      /* Prevent content from being too short */
-      padding-bottom: 20px;
+      /* Prevent padding from creating space */
+      padding-bottom: 0 !important;
     }
 
     /* Hero Section */
     .hero {
       background: linear-gradient(to right, #f8e5c0, #f6d6a8);
-      padding: 30px 15px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      padding: 20px 10px;
+      text-align: center;
     }
 
     .hero img {
-      width: 280px;
+      max-width: 280px;
+      width: 90%;
       border-radius: 12px;
-      margin: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 10px auto;
     }
 
     .hero-text {
       max-width: 500px;
-      margin: 10px;
-      text-align: center;
-      font-size: 18px;
-      line-height: 1.6;
-      font-weight: 500;
+      margin: 0 auto;
+      padding: 10px;
     }
 
     /* Features Section */
     .features {
       background-color: #fef1dc;
-      padding: 30px 15px;
+      padding: 20px 10px;
       text-align: center;
-    }
-
-    .features h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
     }
 
     .feature-cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
+      margin-top: 15px;
     }
 
     .card {
-      background-color: #fffaf0;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 8px;
       padding: 15px;
+      width: 100%;
       max-width: 220px;
-      transition: transform 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Favorites Gallery */
+    /* Gallery Section */
     .favorites {
-      padding: 30px 15px;
+      padding: 20px 10px;
       text-align: center;
-      background-color: #fff8e7;
-    }
-
-    .favorites h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #5d4037;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
+      margin: 15px auto;
+      max-width: 500px;
     }
 
     .gallery-item {
-      width: 120px;
-      height: 120px;
-      border-radius: 10px;
+      width: 48%;
+      max-width: 120px;
+      aspect-ratio: 1/1;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
 
     .gallery-item img {
@@ -121,49 +107,32 @@
       object-fit: cover;
     }
 
-    /* Footer Fix */
+    /* FOOTER LOCK (MOST IMPORTANT PART) */
     footer {
       width: 100%;
       background: #3e2723;
       color: white;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
-      /* Pushes footer to bottom */
-      margin-top: auto;
+      /* This is the magic line */
+      margin-top: auto !important;
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      .hero {
-        padding: 20px 10px;
+    /* Mobile Overrides */
+    @media (max-width: 600px) {
+      .hero, .features, .favorites {
+        padding: 15px 5px;
       }
-
-      .hero img {
-        width: 90%;
-        margin: 10px 0;
-      }
-
-      .hero-text {
-        font-size: 16px;
-      }
-
-      .features, .favorites {
-        padding: 20px 10px;
-      }
-
       .card {
         max-width: 100%;
-        width: 100%;
       }
-
       .gallery-item {
         width: 45%;
-        height: 100px;
       }
-
-      /* Ensure no extra space on mobile */
+      /* Nuclear option to kill extra space */
       html, body {
         overflow-y: auto;
+        position: relative;
       }
     }
   </style>
@@ -172,10 +141,10 @@
 <body>
   <main>
     <div class="hero">
-      <img src="cafe.jpg" alt="Coffee shop interior" />
-      <div class="hero-text">
+      <img src="cafe.jpg" alt="Coffee shop interior">
+      <p class="hero-text">
         Good days start with great coffee. Cozy up with a book or catch up with friends at Coffee Bite – your daily dose of warmth and taste.
-      </div>
+      </p>
     </div>
 
     <div class="features">
@@ -189,7 +158,7 @@
         <div class="card">
           <i class="fas fa-utensils"></i>
           <h4>Tasty Bites</h4>
-          <p>From snacks to sweet treats, we’ve got you covered.</p>
+          <p>From snacks to sweet treats, we've got you covered.</p>
         </div>
         <div class="card">
           <i class="fas fa-wifi"></i>
