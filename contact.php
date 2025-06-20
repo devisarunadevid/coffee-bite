@@ -113,7 +113,7 @@
 
 <body>
   <main>
-    <div class="marquee">Find Us or Get in Touch!</div>
+    <div class="marquee">Get in Touch!</div>
 
     <div class="map-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6858630384!2d80.21442297484171!3d12.991932987325296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525dfa2ed55f3b%3A0x5178b7858fba797f!2sStarbucks!5e0!3m2!1sen!2sin!4v1735031550976!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -128,8 +128,8 @@
       </div>
       <div class="info-box">
         <h4><i class="fas fa-phone-alt"></i> Contact Us</h4>
-        <p>18602660010</p>
-        <p>coffeebite@gmail.com</p>
+        <p><a href="tel:18602660010" style="color:inherit;text-decoration:underline;">18602660010</a></p>
+        <p><a href="mailto:coffeebite@gmail.com" style="color:inherit;text-decoration:underline;">coffeebite@gmail.com</a></p>
       </div>
     </div>
 

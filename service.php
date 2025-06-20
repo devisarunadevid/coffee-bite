@@ -24,7 +24,7 @@
     }
 
     #service {
-      padding: 50px 20px;
+      padding: 80px 20px 80px 20px;
       background-image: linear-gradient(chocolate, white);
     }
 
