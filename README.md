@@ -7,7 +7,7 @@ This project showcases an elegant UI to display menu items, cafe details, and pr
 ---
 
 🌐 **Live Website**  
-🚀 Coming Soon...
+🚀 [Visit Coffee-Bite Live](https://coffee-bite.infinityfreeapp.com/)
 
 ---
 
