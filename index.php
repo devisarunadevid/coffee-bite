@@ -28,32 +28,51 @@
     main {
       flex: 1;
       padding-bottom: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .hero {
       background: linear-gradient(to right, #f8e5c0, #f6d6a8);
-      padding: 20px 10px;
+      padding: 40px 30px 30px 30px;
       text-align: center;
+      max-width: 1000px;
+      width: 100%;
+      margin: 32px 0 40px 0;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     }
 
     .hero img {
-      max-width: 420px;
-      width: 98%;
-      border-radius: 12px;
-      margin: 10px auto;
+      max-width: 520px;
+      width: 100%;
+      border-radius: 14px;
+      margin: 18px auto 0 auto;
       display: block;
     }
 
     .hero-text {
-      max-width: 500px;
-      margin: 0 auto;
+      max-width: 700px;
+      margin: 24px auto 0 auto;
       padding: 10px;
+      font-size: 1.25rem;
     }
 
     .features {
       background-color: #fef1dc;
-      padding: 20px 10px;
+      padding: 40px 30px 30px 30px;
       text-align: center;
+      max-width: 1000px;
+      width: 100%;
+      margin: 40px 0 40px 0;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .features h2 {
+      font-size: 2.4rem;
+      margin-bottom: 28px;
     }
 
     .feature-cards {
@@ -74,24 +93,35 @@
     }
 
     .favorites {
-      padding: 20px 10px;
+      padding: 40px 30px 30px 30px;
       text-align: center;
+      max-width: 1000px;
+      width: 100%;
+      margin: 40px 0 40px 0;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .favorites h2 {
+      font-size: 2.2rem;
+      margin-bottom: 28px;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin: 15px auto;
-      max-width: 500px;
+      gap: 24px;
+      margin: 24px auto 0 auto;
+      max-width: 800px;
     }
 
     .gallery-item {
-      width: 32%;
-      max-width: 180px;
+      width: 23%;
+      max-width: 220px;
+      min-width: 160px;
       aspect-ratio: 1/1;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
     }
 
