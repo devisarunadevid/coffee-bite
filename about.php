@@ -40,9 +40,13 @@
     .marquee-text {
       display: inline-block;
       white-space: nowrap;
-      animation: marquee 12s linear infinite;
+      animation: marquee 18s linear infinite;
       font-size: 22px;
       font-weight: 600;
+    }
+
+    .marquee-text:hover {
+      animation-play-state: paused;
     }
 
     @keyframes marquee {
@@ -57,6 +61,7 @@
       background-color: #f8e5c0;
       align-items: center;
       justify-content: center;
+      margin-bottom: 24px;
     }
 
     .section:nth-child(even) {
@@ -64,7 +69,7 @@
     }
 
     .section img {
-      width: 80%;
+      width: 90%;
       max-width: 300px;
       display: block;
       margin: 0 auto;
@@ -76,7 +81,7 @@
       flex: 1;
       min-width: 300px;
       padding: 20px;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.6;
       color: #3e2723;
     }
