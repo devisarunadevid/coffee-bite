@@ -79,24 +79,44 @@
       transition: transform 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    /* NEW: Customer Favorites Section */
+    .favorites {
+      padding: 30px 15px;
+      text-align: center;
+      background-color: #fff8e7;
     }
 
-    .card i {
-      font-size: 28px;
-      color: #8d6e63;
-      margin-bottom: 10px;
-    }
-
-    .card h4 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      font-size: 14px;
+    .favorites h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
       color: #5d4037;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .gallery-item {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     @media (max-width: 768px) {
@@ -120,13 +140,22 @@
       .card {
         max-width: 90%;
       }
+
+      /* Mobile-optimized gallery */
+      .gallery {
+        gap: 10px;
+      }
+
+      .gallery-item {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-
     <div class="hero">
       <img src="cafe.jpg" alt="Coffee shop interior" />
       <div class="hero-text">
@@ -151,6 +180,25 @@
           <i class="fas fa-wifi"></i>
           <h4>Free Wi-Fi</h4>
           <p>Work, chill or stream while you sip and snack.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW SECTION: Customer Favorites Gallery -->
+    <div class="favorites">
+      <h2>Customer Favorites</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Cappuccino">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Croissant">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Latte Art">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coffee Beans">
         </div>
       </div>
     </div>
