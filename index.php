@@ -2,7 +2,7 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* RESET EVERYTHING THAT COULD CAUSE SPACE */
+
     * {
       margin: 0;
       padding: 0;
@@ -10,7 +10,6 @@
       font-family: 'Roboto', sans-serif;
     }
 
-    /* CRITICAL FIX: Lock screen height */
     html, body {
       height: 100%;
       width: 100%;
@@ -18,23 +17,19 @@
       background-color: #fff8e7;
     }
 
-    /* Force footer to bottom */
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      /* Remove all default margins */
       margin: 0 !important;
       padding: 0 !important;
     }
 
     main {
       flex: 1;
-      /* Prevent padding from creating space */
       padding-bottom: 0 !important;
     }
 
-    /* Hero Section */
     .hero {
       background: linear-gradient(to right, #f8e5c0, #f6d6a8);
       padding: 20px 10px;
@@ -42,10 +37,11 @@
     }
 
     .hero img {
-      max-width: 280px;
-      width: 90%;
+      max-width: 420px;
+      width: 98%;
       border-radius: 12px;
       margin: 10px auto;
+      display: block;
     }
 
     .hero-text {
@@ -54,7 +50,6 @@
       padding: 10px;
     }
 
-    /* Features Section */
     .features {
       background-color: #fef1dc;
       padding: 20px 10px;
@@ -78,7 +73,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Gallery Section */
     .favorites {
       padding: 20px 10px;
       text-align: center;
@@ -94,8 +88,8 @@
     }
 
     .gallery-item {
-      width: 48%;
-      max-width: 120px;
+      width: 32%;
+      max-width: 180px;
       aspect-ratio: 1/1;
       border-radius: 8px;
       overflow: hidden;
@@ -107,18 +101,15 @@
       object-fit: cover;
     }
 
-    /* FOOTER LOCK (MOST IMPORTANT PART) */
     footer {
       width: 100%;
       background: #3e2723;
       color: white;
       padding: 15px;
       text-align: center;
-      /* This is the magic line */
       margin-top: auto !important;
     }
 
-    /* Mobile Overrides */
     @media (max-width: 600px) {
       .hero, .features, .favorites {
         padding: 15px 5px;
@@ -127,9 +118,10 @@
         max-width: 100%;
       }
       .gallery-item {
-        width: 45%;
+        width: 90%;
+        max-width: 320px;
       }
-      /* Nuclear option to kill extra space */
+
       html, body {
         overflow-y: auto;
         position: relative;
