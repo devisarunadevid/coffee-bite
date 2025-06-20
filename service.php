@@ -28,6 +28,14 @@
       background-image: linear-gradient(chocolate, white);
     }
 
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: #4e342e;
+      font-weight: bold;
+    }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -87,46 +95,47 @@
 <body>
   <main>
     <div id="service">
+      <h2 class="section-title">Our Offerings</h2>
       <div class="services-grid">
         <div class="service-card">
           <img src="quinoasalad.jpg" alt="Quinoa Salad">
           <h3>Quinoa Salad</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
         <div class="service-card">
           <img src="brownie.jpg" alt="Brownie">
           <h3>Brownie</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
         <div class="service-card">
           <img src="croissants.jpg" alt="Croissants">
           <h3>Croissants</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
         <div class="service-card">
           <img src="latte.jpg" alt="Latte">
           <h3>Latte</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
         <div class="service-card">
           <img src="mocha.jpg" alt="Mocha">
           <h3>Mocha</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
         <div class="service-card">
           <img src="expresso.jpg" alt="Espresso">
           <h3>Espresso</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
         <div class="service-card">
           <img src="americano.jpg" alt="Americano">
           <h3>Americano</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
         <div class="service-card">
           <img src="cappuccino.jpg" alt="Cappuccino">
           <h3>Cappuccino</h3>
-          <a href="#">Buy Now</a>
+          <a href="register.php">Buy Now</a>
         </div>
       </div>
     </div>
