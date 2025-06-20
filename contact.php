@@ -94,8 +94,18 @@
       background-color: #f3d9b1;
       text-align: center;
       padding: 25px 15px;
-      font-size: 18px;
       color: #3e2723;
+    }
+
+    .filler h4 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #5d4037;
+    }
+
+    .filler p {
+      font-size: 18px;
+      margin: 8px 0;
       font-weight: 500;
     }
   </style>
@@ -103,7 +113,7 @@
 
 <body>
   <main>
-    <div class="marquee">Welcome to Coffee Bite!</div>
+    <div class="marquee">Find Us or Get in Touch!</div>
 
     <div class="map-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6858630384!2d80.21442297484171!3d12.991932987325296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525dfa2ed55f3b%3A0x5178b7858fba797f!2sStarbucks!5e0!3m2!1sen!2sin!4v1735031550976!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -124,7 +134,8 @@
     </div>
 
     <div class="filler">
-      We’re open daily from <strong>8 AM – 10 PM</strong>. Visit us and enjoy the perfect blend of coffee and comfort!
+      <h4><i class="fas fa-clock"></i> Opening Hours</h4>
+      <p>We're open daily from <strong>8 AM – 10 PM</strong>. Visit us and enjoy the perfect blend of coffee and comfort!</p>
     </div>
 
   </main>
