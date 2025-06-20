@@ -65,6 +65,7 @@
       max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
+      border-radius: 18px;
     }
 
     .section:nth-child(even) {
