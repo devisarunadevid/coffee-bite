@@ -10,18 +10,20 @@
 
     html, body {
       height: 100%;
-      display: flex;
-      flex-direction: column;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; 
       background-color: #fef6e4;
       color: #333;
     }
 
     main {
-      flex: 1;
+      flex: 1; 
       display: flex;
       flex-direction: column;
     }
@@ -111,8 +113,13 @@
       </div>
       <img src="cafe2.jpg" alt="about cafe 2">
     </div>
+
+    <div class="section" style="background-color: #f3d9b1; text-align:center;">
+      <p style="font-size: 18px; padding: 20px; max-width: 600px; margin: 0 auto;">
+        “Coffee Bite isn't just a café – it's your escape from the rush. Pet-friendly, cozy, and always brewing joy. Visit us and feel at home!”
+      </p>
+    </div>
   </main>
+
   <?php include("footer.html"); ?>
 </body>
-
-

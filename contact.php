@@ -11,12 +11,14 @@
 
     html, body {
       height: 100%;
-      display: flex;
-      flex-direction: column;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       background-color: #fef6e4;
       color: #333;
     }
@@ -62,7 +64,6 @@
 
     .info-box {
       flex: 1 1 100%;
-      min-width: unset;
       padding: 20px;
       color: #3e2723;
     }
@@ -88,6 +89,15 @@
         text-align: left;
       }
     }
+
+    .filler {
+      background-color: #f3d9b1;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 18px;
+      color: #3e2723;
+      font-weight: 500;
+    }
   </style>
 </head>
 
@@ -112,6 +122,12 @@
         <p>coffeebite@gmail.com</p>
       </div>
     </div>
+
+    <div class="filler">
+      We’re open daily from <strong>8 AM – 10 PM</strong>. Visit us and enjoy the perfect blend of coffee and comfort!
+    </div>
+
   </main>
+
+  <?php include("footer.html"); ?>
 </body>
-<?php include("footer.html"); ?>
