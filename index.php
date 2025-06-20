@@ -84,7 +84,7 @@
     }
 
     .card {
-      background: white;
+      background: #f3e0c7;
       border-radius: 8px;
       padding: 15px;
       width: 100%;
@@ -133,11 +133,11 @@
 
     footer {
       width: 100%;
-      background: #3e2723;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      margin-top: auto !important;
+      background: papayawhip;
+      color: #3e2723;
+      padding: 0;
+      text-align: inherit;
+      margin-top: 0 !important;
     }
 
     @media (max-width: 600px) {
