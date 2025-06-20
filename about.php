@@ -124,7 +124,7 @@
     </div>
 
     <div class="section" style="background-color: #f3d9b1; text-align:center; justify-content: center;">
-      <div style="font-size: 24px; font-style: italic; border-left: 6px solid #c69c6d; background: #fff8e7; padding: 32px 28px; max-width: 700px; margin: 0 auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+      <div style="font-size: 24px; font-style: italic; border-left: 6px solid #c69c6d; background: #fff8e7; padding: 32px 28px; width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: inline-block; box-sizing: border-box;">
         “Coffee Bite isn't just a café – it's your escape from the rush. Pet-friendly, cozy, and always brewing joy. Visit us and feel at home!”
       </div>
     </div>
