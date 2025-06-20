@@ -19,6 +19,8 @@
       background-image: url('Coffee pattern3.jpeg');
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
       color: #3e2723;
     }
 
