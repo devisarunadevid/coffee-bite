@@ -23,23 +23,25 @@
       header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 10px 30px;
+        justify-content: flex-start;
+        padding: 6px 10px;
         background-color: #fff8e7;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
       }
 
       .logo img {
-        height: 100px;
+        height: 60px;
       }
 
       .title {
         flex: 1;
-        text-align: center;
-        font-size: 40px;
+        text-align: left;
+        font-size: 28px;
         color: #8b4513;
         font-weight: bold;
         text-transform: uppercase;
+        margin-left: 10px;
       }
 
       nav {
@@ -87,15 +89,21 @@
 
       @media (max-width: 768px) {
         header {
-          flex-direction: column;
-          gap: 10px;
+          flex-direction: row;
+          gap: 0;
+          align-items: center;
+          justify-content: flex-start;
           position: relative;
+          padding: 6px 5px;
         }
         .title {
-          font-size: 28px;
+          font-size: 22px;
+          margin-left: 8px;
         }
         .hamburger {
           display: flex;
+          position: static;
+          margin-right: 8px;
         }
         nav {
           flex-direction: column;
@@ -129,11 +137,32 @@
           border-bottom: none;
         }
       }
+
+      /* Overlay for nav menu */
+      .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 999;
+      }
+      .nav-overlay.open {
+        display: block;
+      }
     </style>
     <script>
       function toggleMenu() {
         var nav = document.getElementById("mainNav");
+        var overlay = document.getElementById("navOverlay");
         nav.classList.toggle("open");
+        overlay.classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("mainNav").classList.remove("open");
+        document.getElementById("navOverlay").classList.remove("open");
       }
     </script>
   </head>
@@ -149,6 +178,7 @@
       </div>
       <div class="title">Coffee Bite</div>
     </header>
+    <div id="navOverlay" class="nav-overlay" onclick="closeMenu()"></div>
 
     <nav id="mainNav">
       <a href="index.php"><i class="fa fa-home"></i> Home</a>
