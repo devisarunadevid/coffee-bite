@@ -57,15 +57,11 @@
     .section {
       display: flex;
       flex-wrap: wrap;
-      padding: 48px 20px;
+      padding: 30px 10px;
       background-color: #f8e5c0;
       align-items: center;
       justify-content: center;
-      margin-bottom: 32px;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 18px;
+      margin-bottom: 24px;
     }
 
     .section:nth-child(even) {
@@ -123,10 +119,10 @@
       <img src="cafe2.jpg" alt="about cafe 2">
     </div>
 
-    <div class="section" style="background-color: #f3d9b1; text-align:center; justify-content: center;">
-      <div style="font-size: 24px; font-style: italic; border-left: 6px solid #c69c6d; background: #fff8e7; padding: 32px 28px; width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: inline-block; box-sizing: border-box;">
+    <div class="section" style="background-color: #f3d9b1; text-align:center;">
+      <p style="font-size: 18px; padding: 20px; max-width: 600px; margin: 0 auto; font-style: italic;">
         “Coffee Bite isn't just a café – it's your escape from the rush. Pet-friendly, cozy, and always brewing joy. Visit us and feel at home!”
-      </div>
+      </p>
     </div>
   </main>
 
