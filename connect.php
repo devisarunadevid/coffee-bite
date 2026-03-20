@@ -1,15 +1,20 @@
 <?php
-$servername = "sql305.infinityfree.com"; 
-$username = "if0_39270221";             
-$password = "arunadevi45";   
-$dbname = "if0_39270221_cafe";          
+session_start();
 
-$con = mysqli_connect($servername, $username, $password, $dbname);
+// DB connection (Railway)
+$host = getenv('MYSQLHOST');
+$user = getenv('MYSQLUSER');
+$pass = getenv('MYSQLPASSWORD');
+$db   = getenv('MYSQLDATABASE');
+$port = getenv('MYSQLPORT');
 
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
+$con = new mysqli($host, $user, $pass, $db, $port);
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 
+// Form data
 $a = $_POST['name'];
 $b = $_POST['email'];
 $c = $_POST['password'];
@@ -17,18 +22,26 @@ $d = $_POST['phone_number'];
 $e = $_POST['specials'];
 $f = $_POST['dob'];
 
-$target_dir = "uploads/";
+// File upload
+$target_dir = __DIR__ . "/uploads/";
+
 if (!is_dir($target_dir)) {
     mkdir($target_dir, 0777, true);
 }
-$target_file = $target_dir . basename($_FILES["id_proof"]["name"]);
+
+$filename = time() . "_" . basename($_FILES["id_proof"]["name"]);
+$target_file = $target_dir . $filename;
+
 move_uploaded_file($_FILES["id_proof"]["tmp_name"], $target_file);
 
-$query = "INSERT INTO details (name, email, password, phone_number, specials, dob, id_proof) 
-          VALUES ('$a', '$b', '$c', '$d', '$e', '$f', '$target_file')";
+// Insert using prepared statement
+$stmt = $con->prepare("INSERT INTO details 
+(name, email, password, phone_number, specials, dob, id_proof) 
+VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-session_start();
-if (mysqli_query($con, $query)) {
+$stmt->bind_param("sssssss", $a, $b, $c, $d, $e, $f, $target_file);
+
+if ($stmt->execute()) {
     $_SESSION['user_details'] = [
         'name' => $a,
         'email' => $b,
@@ -37,11 +50,13 @@ if (mysqli_query($con, $query)) {
         'dob' => $f,
         'id_proof' => $target_file
     ];
+
     header('Location: details.php');
     exit();
 } else {
-    echo "Error: " . $query . "<br>" . mysqli_error($con);
+    echo "Error: " . $stmt->error;
 }
 
-mysqli_close($con);
+$stmt->close();
+$con->close();
 ?>
