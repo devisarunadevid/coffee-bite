@@ -155,7 +155,7 @@
 
         <div class="form-group">
           <label for="id_proof">ID Proof</label>
-          <input name="id_proof" type="file" required>
+          <input name="id_proof" type="file" accept=".jpg,.jpeg,.png,.pdf" required>
         </div>
 
         <div class="btn-group">
